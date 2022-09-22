@@ -1,0 +1,10 @@
+.Story-Card {
+   background: slategray;
+   width: 15vw;
+   padding: 20px;
+   margin: 20px;
+}
+
+.Story-Card:first-of-type {
+   /* margin-top: 4px; */
+}

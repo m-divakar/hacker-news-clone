@@ -1,0 +1,6 @@
+.Stories-Container {
+   display: grid;
+   height: 100vh;
+   max-width: 80vw;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
