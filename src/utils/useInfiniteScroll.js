@@ -13,6 +13,10 @@ const useInfiniteScroll = () => {
             document.documentElement.clientHeight >=
             document.documentElement.scrollHeight ||
          loading
+
+         //  window.innerHeight + document.documentElement.scrollTop !==
+         //     document.documentElement.offsetHeight ||
+         //  loading
       ) {
          return false;
       } else setLoading(true);
@@ -36,7 +40,12 @@ const useInfiniteScroll = () => {
          window.removeEventListener("scroll", handleScroll);
       };
    }, []);
-   console.log(count);
+
+   //    console.log(count);
+   //    console.log(window.innerHeight);
+   //    console.log(document.documentElement.scrollTop);
+   //    console.log(document.documentElement.offsetHeight);
+
    return { count };
 };
 

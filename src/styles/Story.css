@@ -1,3 +1,7 @@
+body.active-modal {
+   overflow-y: hidden;
+}
+
 .Story-Card {
    background: slategray;
    width: 15vw;

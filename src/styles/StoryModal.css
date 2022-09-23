@@ -1,0 +1,23 @@
+.Story-modal,
+.Story-overlay {
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.Story-overlay {
+   background: rgba(49, 49, 49, 0.7);
+}
+.Story-content-modal {
+   width: 90vw;
+   height: 80vh;
+   background: #fff;
+   padding: 5rem;
+   border-radius: 2rem;
+}

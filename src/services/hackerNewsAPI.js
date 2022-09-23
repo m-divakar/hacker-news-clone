@@ -21,3 +21,9 @@ export const getStory = async (storyId) => {
       .then(({ data }) => data && selectFields(data));
    return result;
 };
+export const getComment = async (commentId) => {
+   const result = await axios
+      .get(`${storyUrl + commentId}.json`)
+      .then(({ data }) => data);
+   return result;
+};
