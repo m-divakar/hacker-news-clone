@@ -5,8 +5,11 @@ import { mapTime } from "../utils/mapTime";
 export const StoryModal = ({ toggleModal, story }) => {
    return (
       <>
-         <div className="Story-modal">
-            <div className="Story-overlay" onClick={toggleModal}>
+         <div className="Story-modal " key={story.by}>
+            <div className="Story-overlay">
+               <button className="Story-button-modal" onClick={toggleModal}>
+                  Close
+               </button>
                <div className="Story-content-modal">
                   <span className="Story-description-modal">
                      <span className="Story-title-modal">{story.title}</span>
@@ -20,9 +23,6 @@ export const StoryModal = ({ toggleModal, story }) => {
                   <span className="Story-comments">
                      {story.kids && <Comments commentsIds={story.kids} />}
                   </span>
-                  <button className="Story-button-modal" onClick={toggleModal}>
-                     Close
-                  </button>
                </div>
             </div>
          </div>

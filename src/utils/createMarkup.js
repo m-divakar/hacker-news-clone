@@ -1,3 +1,5 @@
-export const createMarkup = (markup) => ({
-   __html: markup,
-});
+export const createMarkup = (markup) => {
+   return {
+      __html: markup,
+   };
+};
