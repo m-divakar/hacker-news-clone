@@ -11,7 +11,7 @@ export const StoryModal = ({ toggleModal, story }) => {
                   Close
                </button>
                <div className="Story-content-modal">
-                  <span className="Story-description-modal">
+                  <div className="Story-description-modal">
                      <span className="Story-title-modal">{story.title}</span>
                      <span className="Story-details-modal">
                         <div className="Story-by-modal">by: {story.by}</div>
@@ -19,9 +19,11 @@ export const StoryModal = ({ toggleModal, story }) => {
                            posted: {mapTime(story.time)}
                         </div>
                      </span>
-                  </span>
+                  </div>
                   <span className="Story-comments">
-                     {story.kids && <Comments commentsIds={story.kids} />}
+                     <div className="comment-wrapper">
+                        {story.kids && <Comments commentsIds={story.kids} />}
+                     </div>
                   </span>
                </div>
             </div>

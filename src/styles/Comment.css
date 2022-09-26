@@ -2,6 +2,7 @@
    position: relative;
    margin-left: 3rem;
    margin-top: 1rem;
+   max-width: 60vw;
 }
 .comment-container::before {
    content: "";

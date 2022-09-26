@@ -12,7 +12,7 @@
    align-items: center;
 }
 .Story-overlay {
-   background: rgba(49, 49, 49, 0.7);
+   background: rgba(0, 0, 0, 0.9);
 }
 .Story-button-modal {
    position: absolute;
@@ -20,19 +20,28 @@
    right: 0;
    margin: 1rem;
 }
+.Story-description-modal {
+   /* to edit */
+   margin-left: 15vw;
+}
 .Story-content-modal {
    width: 100vw;
    height: 95vh;
-   margin-top: 10vh;
-   padding-top: 2rem;
+   margin-top: 4rem;
    overflow-y: scroll;
    /* scrollbar-width: none; */
    background: #fff;
    padding: 5rem;
-   border-radius: 2rem 2rem 0 0;
+   border-radius: 1rem 1rem 0 0;
 }
 .Story-content-modal::-webkit-scrollbar {
    /* WebKit */
    width: 0;
    height: 0;
+}
+.Story-comments {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }

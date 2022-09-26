@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { debounce } from "./debounce";
 
-const useInfiniteScroll = () => {
+const useInfiniteScroll = (maxCount) => {
    const [loading, setLoading] = useState(false);
    const [count, setCount] = useState(30);
 
@@ -20,14 +20,14 @@ const useInfiniteScroll = () => {
       ) {
          return false;
       } else setLoading(true);
-   }, 500);
+   }, maxCount);
 
    useEffect(() => {
       if (!loading) {
          return;
       }
-      if (count + 30 >= 500) {
-         setCount(500);
+      if (count + 30 >= maxCount) {
+         setCount(maxCount);
       } else {
          setCount(count + 30);
       }

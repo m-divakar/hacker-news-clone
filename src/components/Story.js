@@ -30,6 +30,9 @@ export const Story = memo(function Story({ storyId }) {
             <p>by: {story.by}</p>
             <p>posted: {mapTime(story.time)}</p>
             <p>comments: {story.kids && story.kids.length}</p>
+            <a href={story.url} target="_blank" rel="noopener noreferrer">
+               click me
+            </a>
          </div>
          {modal && <StoryModal toggleModal={toggleModal} story={story} />}
       </>
