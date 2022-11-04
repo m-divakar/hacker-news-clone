@@ -1,6 +1,47 @@
 .Job-Card {
-   background: slategray;
-   width: 15vw;
-   padding: 20px;
-   margin: 20px;
+   background: #fff;
+   border: 1px solid gray;
+   text-decoration: none;
+   width: 90%;
+   /* min-width: 600px; */
+
+   min-height: 200px;
+   padding: 30px;
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.Job-Title {
+   font-size: 1.6rem;
+   margin-bottom: 0.6rem;
+}
+.Job-Provider {
+   font-weight: 450;
+}
+.Job-Post-Time {
+   padding-bottom: 0.3rem;
+   font-size: 0.8rem;
+}
+.Job-Card-Link {
+   flex: 1;
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   font-size: 0.8rem;
+}
+.Job-Card-Link a {
+   text-decoration: none;
+   font-size: 0.9rem;
+   padding: 0.2rem 0.5rem;
+   color: lightslategray;
+   border: 1px solid lightslategray;
+   border-radius: 1rem;
+   transition: 0.3s ease-out;
+}
+.Job-Card-Link a:hover {
+   background-color: lightslategray;
+   transition: 0.3s ease-out;
+   color: #fff;
+   cursor: pointer;
 }

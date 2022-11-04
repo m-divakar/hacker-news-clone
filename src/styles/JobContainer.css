@@ -1,6 +1,17 @@
 .Job-Container {
    display: grid;
    min-height: 100vh;
-   max-width: 80vw;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   max-width: 70vw;
+   grid-gap: 2rem;
+   list-style: none;
+
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+   justify-items: center;
+}
+
+@media (max-width: 1200px) {
+   .Job-Container {
+      grid-template-columns: 1fr;
+   }
 }

@@ -3,6 +3,7 @@ import { getComment } from "../services/hackerNewsAPI";
 import { createMarkup } from "../utils/createMarkup";
 import { mapTime } from "../utils/mapTime";
 import { Comments } from "./Comments";
+import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 import "../styles/Comment.css";
 
 export const Comment = ({ commentId }) => {
@@ -32,13 +33,21 @@ export const Comment = ({ commentId }) => {
                      id={commentId}
                      dangerouslySetInnerHTML={createMarkup(comment.text)}
                   ></p>
-                  <div className="show-replies" onClick={showComments}>
+                  <div className="show-replies">
                      <p>
                         {comment.kids &&
-                           `${commentFlag ? "hide" : "show"} ${
-                              comment.kids.length
-                           } ${comment.kids.length > 1 ? "replies" : "reply"}`}
+                           ` ${comment.kids.length} ${
+                              comment.kids.length > 1 ? "replies" : "reply"
+                           }`}
                      </p>
+                     <div onClick={showComments}>
+                        {comment.kids &&
+                           (commentFlag ? (
+                              <IoIosArrowDropup size="1rem" />
+                           ) : (
+                              <IoIosArrowDropdown size="1rem" />
+                           ))}
+                     </div>
                   </div>
                </div>
                {comment.kids && commentFlag && (

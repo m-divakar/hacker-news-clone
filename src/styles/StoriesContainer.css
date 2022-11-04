@@ -2,5 +2,16 @@
    display: grid;
    min-height: 100vh;
    max-width: 80vw;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 2rem;
+   list-style: none;
+
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+   justify-items: center;
+}
+
+@media (max-width: 1200px) {
+   .Stories-Container {
+      grid-template-columns: 1fr;
+   }
 }

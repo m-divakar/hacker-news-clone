@@ -1,0 +1,8 @@
+.Card-Skeleton {
+   background-color: #fff;
+   border: 1px solid gray;
+   width: 100%;
+   min-height: 200px;
+   padding: 30px;
+   border-radius: 0.5rem;
+}

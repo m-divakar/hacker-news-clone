@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 
 const App = () => {
    const [sidebar, setSidebar] = useState(false);
+
    return (
       <div className="App">
          <Navbar sidebar={sidebar} setSidebar={setSidebar} />

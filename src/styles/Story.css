@@ -3,12 +3,55 @@ body.active-modal {
 }
 
 .Story-Card {
-   background: slategray;
-   width: 15vw;
-   padding: 20px;
-   margin: 20px;
+   background: #fff;
+   border: 1px solid gray;
+   text-decoration: none;
+   width: 100%;
+   /* min-width: 600px; */
+
+   min-height: 200px;
+   padding: 30px;
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: column;
+}
+.Story-Card a {
+   color: rgb(210, 210, 210);
+   align-self: flex-end;
+   margin-top: -1rem;
+   margin-right: -1rem;
+   padding: 0.2rem;
+   cursor: pointer;
+}
+.Story-Contents {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   cursor: pointer;
+}
+.Story-Title {
+   font-size: 1.6rem;
+   margin-bottom: 0.6rem;
+}
+.Story-Author {
+   font-weight: 450;
+}
+.Story-Details {
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   font-size: 0.8rem;
 }
 
 /* .Story-Card:first-of-type {
    margin-top: 4px;
+} */
+/* @media (max-width: 1200px) {
+   .Story-Card {
+      width: 60vw;
+      min-width: 600px;
+      height: 20vh;
+      min-height: 200px;
+   }
 } */

@@ -5,10 +5,13 @@ import React, { useState, useEffect, memo } from "react";
 import { StoryModal } from "./StoryModal";
 import { mapTime } from "../utils/mapTime";
 import { getStory } from "../services/hackerNewsAPI";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import CardSkeleton from "./CardSkeleton";
 
 export const Story = memo(function Story({ storyId }) {
    const [story, setStory] = useState({});
    const [modal, setModal] = useState(false);
+   const [isLoading, setIsLoading] = useState(true);
 
    const toggleModal = () => {
       setModal(!modal);
@@ -21,20 +24,33 @@ export const Story = memo(function Story({ storyId }) {
    }
 
    useEffect(() => {
-      getStory(storyId).then((data) => data && data.url && setStory(data));
+      getStory(storyId).then((data) => {
+         data && data.url && setStory(data);
+         setIsLoading(false);
+      });
    }, []);
-   return story && story.url ? (
+   return (
       <>
-         <div className="Story-Card" onClick={toggleModal}>
-            <p>{story.title}</p>
-            <p>by: {story.by}</p>
-            <p>posted: {mapTime(story.time)}</p>
-            <p>comments: {story.kids && story.kids.length}</p>
-            <a href={story.url} target="_blank" rel="noopener noreferrer">
-               click me
-            </a>
-         </div>
-         {modal && <StoryModal toggleModal={toggleModal} story={story} />}
+         {isLoading ? (
+            <CardSkeleton />
+         ) : story && story.url ? (
+            <>
+               <div className="Story-Card">
+                  <a href={story.url} target="_blank" rel="noopener noreferrer">
+                     <FaExternalLinkAlt size="1rem" />
+                  </a>
+                  <div className="Story-Contents" onClick={toggleModal}>
+                     <p className="Story-Title">{story.title}</p>
+                     <p className="Story-Author">- {story.by}</p>
+                     <div className="Story-Details">
+                        <p> {mapTime(story.time)} ago</p>
+                        <p>{story.kids && story.kids.length} comments</p>
+                     </div>
+                  </div>
+               </div>
+               {modal && <StoryModal toggleModal={toggleModal} story={story} />}
+            </>
+         ) : null}
       </>
-   ) : null;
+   );
 });
