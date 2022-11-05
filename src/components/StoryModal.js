@@ -1,6 +1,7 @@
 import "../styles/StoryModal.css";
 import { Comments } from "./Comments";
 import { mapTime } from "../utils/mapTime";
+import { AiOutlineClose } from "react-icons/ai";
 
 export const StoryModal = ({ toggleModal, story }) => {
    return (
@@ -8,21 +9,23 @@ export const StoryModal = ({ toggleModal, story }) => {
          <div className="Story-modal " key={story.by}>
             <div className="Story-overlay">
                <button className="Story-button-modal" onClick={toggleModal}>
-                  Close
+                  <AiOutlineClose />
                </button>
                <div className="Story-content-modal">
                   <div className="Story-description-modal">
-                     <span className="Story-title-modal">{story.title}</span>
-                     <span className="Story-details-modal">
-                        <div className="Story-by-modal">by: {story.by}</div>
-                        <div className="Story-posted-modal">
-                           posted: {mapTime(story.time)}
-                        </div>
-                     </span>
+                     <p className="Story-title-modal">{story.title}</p>
+                     {/* <div className="Story-post-details-modal"> */}
+                     <p className="Story-by-modal">- {story.by}</p>
+                     <p className="Story-posted-modal">
+                        {mapTime(story.time)} ago
+                     </p>
+                     {/* </div> */}
                   </div>
                   <span className="Story-comments">
-                     <div className="comment-wrapper">
-                        {story.kids && <Comments commentsIds={story.kids} />}
+                     <div className="comment-wrappers">
+                        {story.kids ? (
+                           <Comments commentsIds={story.kids} />
+                        ) : null}
                      </div>
                   </span>
                </div>

@@ -44,7 +44,7 @@ export const Story = memo(function Story({ storyId }) {
                      <p className="Story-Author">- {story.by}</p>
                      <div className="Story-Details">
                         <p> {mapTime(story.time)} ago</p>
-                        <p>{story.kids && story.kids.length} comments</p>
+                        <p>{(story.kids && story.kids.length) || 0} comments</p>
                      </div>
                   </div>
                </div>

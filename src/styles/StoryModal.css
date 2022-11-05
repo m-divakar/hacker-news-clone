@@ -2,14 +2,10 @@
 .Story-overlay {
    width: 100vw;
    height: 100vh;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
    position: fixed;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   /* display: flex; */
+   /* justify-content: center; */
+   /* align-items: center; */
 }
 .Story-overlay {
    background: rgba(0, 0, 0, 0.9);
@@ -18,17 +14,23 @@
    position: absolute;
    top: 0;
    right: 0;
-   margin: 1rem;
+   color: aqua;
+   background: none;
+   border: none;
+   font-size: 1.5rem;
+   padding: 1rem;
 }
-.Story-description-modal {
-   /* to edit */
-   margin-left: 15vw;
+.Story-button-modal:hover {
+   cursor: pointer;
 }
 .Story-content-modal {
    width: 100vw;
    height: 95vh;
-   margin-top: 4rem;
+   margin-top: 3rem;
    overflow-y: scroll;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    /* scrollbar-width: none; */
    background: #fff;
    padding: 5rem;
@@ -38,6 +40,23 @@
    /* WebKit */
    width: 0;
    height: 0;
+}
+.Story-description-modal {
+   /* display: flex; */
+   max-width: 62vw;
+   /* flex-direction: column; */
+   /* align-items: center; */
+}
+
+.Story-title-modal {
+   font-size: 2.5rem;
+}
+.Story-by-modal {
+   font-size: 1.2rem;
+   font-weight: 450;
+}
+.Story-posted-modal {
+   opacity: 0.8;
 }
 .Story-comments {
    display: flex;
