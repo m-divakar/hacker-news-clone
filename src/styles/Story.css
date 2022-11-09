@@ -3,10 +3,11 @@ body.active-modal {
 }
 
 .Story-Card {
-   background: #fff;
+   /* background: #fff; */
+   background: #2e4057;
+   color: rgb(212, 212, 212);
    text-decoration: none;
    width: 100%;
-
    min-height: 200px;
    padding: 30px;
    border-radius: 0.5rem;
@@ -14,7 +15,7 @@ body.active-modal {
    flex-direction: column;
 
    border: 1px solid #7f7caf;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .Story-Card a {
    color: rgb(210, 210, 210);
@@ -45,15 +46,3 @@ body.active-modal {
    align-items: flex-end;
    font-size: 0.8rem;
 }
-
-/* .Story-Card:first-of-type {
-   margin-top: 4px;
-} */
-/* @media (max-width: 1200px) {
-   .Story-Card {
-      width: 60vw;
-      min-width: 600px;
-      height: 20vh;
-      min-height: 200px;
-   }
-} */

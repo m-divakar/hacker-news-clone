@@ -34,7 +34,7 @@ export const Comment = ({ commentId }) => {
                      <div className="comment-card-header">
                         <div className="commented-by">{comment.by} </div>
                         <div className="posted-time">
-                           {mapTime(comment.time)}ago`
+                           {mapTime(comment.time)}ago
                         </div>
                      </div>
                      <p
