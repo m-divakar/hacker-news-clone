@@ -21,8 +21,7 @@ export const Comment = ({ commentId }) => {
          setComment(data);
          setIsLoading(false);
       });
-      console.log(isLoading, "useeffect");
-   }, []);
+   }, [commentId]);
 
    return (
       <>
@@ -35,7 +34,7 @@ export const Comment = ({ commentId }) => {
                      <div className="comment-card-header">
                         <div className="commented-by">{comment.by} </div>
                         <div className="posted-time">
-                           posted:{mapTime(comment.time)}ago`
+                           {mapTime(comment.time)}ago`
                         </div>
                      </div>
                      <p

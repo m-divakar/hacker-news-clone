@@ -1,4 +1,5 @@
 .Job-Container {
+   margin-top: 6rem;
    display: grid;
    min-height: 100vh;
    max-width: 70vw;

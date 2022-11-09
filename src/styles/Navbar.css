@@ -1,3 +1,44 @@
+.Navbar {
+   position: fixed;
+   background-color: #426a5a;
+   min-width: 100%;
+   height: 4rem;
+   display: flex;
+   align-items: center;
+   color: #9ac2c9;
+}
+.Logo {
+   flex: 0.7;
+   justify-content: left;
+   font-size: 2rem;
+   font-weight: 500;
+   padding-left: 2rem;
+}
+.Links {
+   flex: 0.3;
+   display: flex;
+   width: auto;
+   justify-content: space-around;
+}
+.Links a {
+   text-decoration: none;
+   font-size: 1.2rem;
+   color: #9ac2c9;
+   width: fit-content;
+}
+
+.Links :hover {
+   color: #ffcb47;
+   transition: 0.2s;
+}
+.menu-bars {
+   padding: 1rem;
+   font-size: 2rem;
+   background: none;
+   color: gray;
+   display: none;
+}
+
 .navbar {
    position: absolute;
    top: 0;
@@ -7,24 +48,17 @@
    justify-content: flex-end;
 }
 
-.menu-bars {
-   padding: 1rem;
-   font-size: 2rem;
-   background: none;
-   color: gray;
-}
-
 .nav-menu {
    opacity: 0.96;
    z-index: 100;
    background: black;
-   width: 30vw;
+   width: 100vw;
    height: 100vh;
    display: flex;
    justify-content: center;
    position: fixed;
    top: 0;
-   right: -30vw;
+   right: -100vw;
    transition: 0.2s;
 }
 .nav-menu.active {
@@ -71,14 +105,6 @@
 
 .nav-text:hover {
    cursor: pointer;
-   font-size: 90%;
-   font-weight: bold;
-   border-radius: 20px;
-}
-
-.nav-text:hover::after {
-   left: -30px;
-   width: 150%;
 }
 
 .nav-text a {
@@ -91,10 +117,6 @@
    align-items: center;
    padding: 0.5rem;
    border-radius: 4px;
-}
-
-.nav-text a:hover {
-   color: black;
 }
 
 .nav-menu-items {
@@ -110,6 +132,12 @@
    font-size: 2rem;
    cursor: pointer;
 }
-.navbar-toggle:hover {
-   color: gray;
+
+@media only screen and (max-width: 1200px) {
+   .menu-bars {
+      display: flex;
+   }
+   .Navbar .Links a {
+      display: none;
+   }
 }

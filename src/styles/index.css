@@ -12,6 +12,13 @@ body {
       "Helvetica Neue", sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+   font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+   html {
+      font-size: 12px;
+   }
 }
 
 code {

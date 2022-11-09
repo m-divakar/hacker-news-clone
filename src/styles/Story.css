@@ -4,16 +4,17 @@ body.active-modal {
 
 .Story-Card {
    background: #fff;
-   border: 1px solid gray;
    text-decoration: none;
    width: 100%;
-   /* min-width: 600px; */
 
    min-height: 200px;
    padding: 30px;
    border-radius: 0.5rem;
    display: flex;
    flex-direction: column;
+
+   border: 1px solid #7f7caf;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .Story-Card a {
    color: rgb(210, 210, 210);
@@ -25,6 +26,7 @@ body.active-modal {
 }
 .Story-Contents {
    display: flex;
+   /* color: #054a91; */
    flex-direction: column;
    flex: 1;
    cursor: pointer;

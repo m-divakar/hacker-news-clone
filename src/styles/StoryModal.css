@@ -1,5 +1,6 @@
 .Story-modal,
 .Story-overlay {
+   margin-top: -3rem;
    width: 100vw;
    height: 100vh;
    position: fixed;
@@ -7,6 +8,7 @@
    /* justify-content: center; */
    /* align-items: center; */
 }
+
 .Story-overlay {
    background: rgba(0, 0, 0, 0.9);
 }

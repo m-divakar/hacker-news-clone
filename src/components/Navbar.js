@@ -2,18 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
-const Navbar = ({ sidebar, setSidebar }) => {
+const Navbar = () => {
+   const [sidebar, setSidebar] = useState(false);
+
    const showNavbar = () => {
       setSidebar(!sidebar);
    };
    return (
       <>
-         <div className="navbar">
-            <Link to="#" onClick={showNavbar} className="menu-bars">
+         <div className="Navbar">
+            <div className="Logo">SlackerNews</div>
+
+            <nav className="Links">
+               <Link to="./">Top Stories</Link>
+               <Link to="./newStories">New Stories</Link>
+               <Link to="./jobs">Jobs</Link>
+            </nav>
+            <div className="menu-bars" onClick={showNavbar}>
                <FaBars />
-            </Link>
+            </div>
          </div>
+
          <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
             <ul className="nav-menu-items">
                <li className="navbar-toggle" onClick={showNavbar}>

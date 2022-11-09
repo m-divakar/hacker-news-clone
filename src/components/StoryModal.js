@@ -21,6 +21,7 @@ export const StoryModal = ({ toggleModal, story }) => {
                      </p>
                      {/* </div> */}
                   </div>
+
                   <span className="Story-comments">
                      <div className="comment-wrappers">
                         {story.kids ? (
