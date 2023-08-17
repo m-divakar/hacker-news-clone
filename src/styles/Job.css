@@ -1,21 +1,20 @@
 .Job-Card {
-   background: #2e4057;
-   color: rgba(212, 212, 212);
-   border: 1px solid rgba(0, 0, 0, 0.3);
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
    text-decoration: none;
    width: 90%;
-   /* min-width: 600px; */
-
    min-height: 200px;
    padding: 30px;
    border-radius: 0.5rem;
    display: flex;
    flex-direction: column;
 }
+.Job-Card:hover {
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
 .Job-Title {
-   font-size: 1.6rem;
+   font-size: 1.2rem;
+   font-family: "Poppins";
    margin-bottom: 0.6rem;
 }
 .Job-Provider {
@@ -36,13 +35,13 @@
    text-decoration: none;
    font-size: 0.9rem;
    padding: 0.2rem 0.5rem;
-   color: lightslategray;
-   border: 1px solid lightslategray;
+   color: green;
+   border: 1px solid green;
    border-radius: 1rem;
    transition: 0.3s ease-out;
 }
 .Job-Card-Link a:hover {
-   background-color: lightslategray;
+   background-color: green;
    transition: 0.3s ease-out;
    color: #fff;
    cursor: pointer;

@@ -3,9 +3,7 @@ body.active-modal {
 }
 
 .Story-Card {
-   /* background: #fff; */
-   background: #2e4057;
-   color: rgb(212, 212, 212);
+   background: #fff;
    text-decoration: none;
    width: 100%;
    min-height: 200px;
@@ -13,12 +11,12 @@ body.active-modal {
    border-radius: 0.5rem;
    display: flex;
    flex-direction: column;
-
-   border: 1px solid #7f7caf;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.Story-Card:hover {
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .Story-Card a {
-   color: rgb(210, 210, 210);
    align-self: flex-end;
    margin-top: -1rem;
    margin-right: -1rem;
@@ -27,22 +25,30 @@ body.active-modal {
 }
 .Story-Contents {
    display: flex;
-   /* color: #054a91; */
+   color: black;
+   font-weight: 500;
    flex-direction: column;
    flex: 1;
    cursor: pointer;
 }
 .Story-Title {
-   font-size: 1.6rem;
+   font-size: 1rem;
    margin-bottom: 0.6rem;
+   font-family: Poppins;
+   font-weight: 500;
 }
 .Story-Author {
-   font-weight: 450;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: flex-end;
+   opacity: 0.8;
+   flex: 1;
 }
 .Story-Details {
-   flex: 1;
    display: flex;
    justify-content: space-between;
    align-items: flex-end;
-   font-size: 0.8rem;
+   font-size: 0.7rem;
+   opacity: 0.8;
 }

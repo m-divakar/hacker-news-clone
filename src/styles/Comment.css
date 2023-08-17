@@ -6,7 +6,8 @@
 }
 .comment-container::before {
    content: "";
-   background-color: rgb(171, 171, 171);
+   background-color: black;
+   opacity: 0.3;
    position: absolute;
    min-height: 100%;
    width: 2px;
@@ -15,17 +16,14 @@
 
 .comment-card {
    padding: 20px;
-   /* background-color: #fff; */
-   background: #2e4057;
-   /* color: #fff; */
-   color: rgb(212, 212, 212);
-
-   border: 1px solid rgba(0, 0, 0, 0.3);
+   background-color: #fff;
    border-radius: 0.5rem;
    min-width: 100%;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .comment-text {
+   font-family: "Poppins";
+   font-size: 0.85rem;
    margin-bottom: 1rem;
 }
 .comment-card-header {
